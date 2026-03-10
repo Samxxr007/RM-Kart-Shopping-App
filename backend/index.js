@@ -42,8 +42,5 @@ app.use((err, req, res, next) => {
     res.status(500).json({ error: 'Internal server error' });
 });
 
-// ─── Start ────────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-    console.log(`🚀 ShopSphere backend running at http://localhost:${PORT}`);
-    console.log(`   Health check: http://localhost:${PORT}/api/health`);
-});
+// ─── Export ───────────────────────────────────────────────────────────────────
+module.exports = app;
