@@ -44,11 +44,11 @@ const Login = () => {
     };
 
     return (
-        <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
-            <div className="glass-panel" style={{ width: '100%', maxWidth: '450px', padding: '3rem' }}>
-                <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '0.5rem' }}>Welcome Back</h2>
-                    <p style={{ color: 'var(--text-secondary)' }}>Sign in as {role.charAt(0) + role.slice(1).toLowerCase()}</p>
+        <div style={{ minHeight: 'calc(100vh - 70px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
+            <div className="glass-panel" style={{ width: '100%', maxWidth: '450px', padding: 'clamp(1.5rem, 5vw, 3rem)' }}>
+                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                    <h2 className="text-responsive-h2" style={{ fontWeight: 800, marginBottom: '0.5rem' }}>Welcome Back</h2>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Sign in as {role.charAt(0) + role.slice(1).toLowerCase()}</p>
                 </div>
 
                 {error && (

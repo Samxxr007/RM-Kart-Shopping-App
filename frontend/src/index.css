@@ -85,6 +85,35 @@ button {
   padding: 0 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Responsive Typography Utilities */
+.text-responsive-h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.text-responsive-h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block !important;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+}
+
 /* Basic Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }

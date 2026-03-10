@@ -45,9 +45,9 @@ const Products = () => {
     }
 
     return (
-        <div className="container animate-fade-in" style={{ padding: '4rem 1.5rem' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '0.5rem' }}>All Products</h2>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>
+        <div className="container animate-fade-in" style={{ padding: '2rem 1rem 4rem' }}>
+            <h2 className="text-responsive-h2" style={{ fontWeight: 800, marginBottom: '0.5rem' }}>All Products</h2>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.9rem' }}>
                 {filtered.length} item{filtered.length !== 1 ? 's' : ''} available
             </p>
 

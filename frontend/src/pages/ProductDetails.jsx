@@ -42,13 +42,13 @@ const ProductDetails = () => {
     );
 
     return (
-        <div className="container animate-fade-in" style={{ padding: '4rem 1.5rem' }}>
-            <button onClick={() => navigate(-1)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>
-                <ArrowLeft size={20} /> Back to Products
+        <div className="container animate-fade-in" style={{ padding: '2rem 1rem 4rem' }}>
+            <button onClick={() => navigate(-1)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '0.9rem' }}>
+                <ArrowLeft size={18} /> Back
             </button>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem' }}>
-                <div className="glass-panel" style={{ overflow: 'hidden', borderRadius: '24px', aspectRatio: '1' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 5vw, 4rem)' }}>
+                <div className="glass-panel" style={{ overflow: 'hidden', borderRadius: '16px', aspectRatio: '1', maxHeight: '400px', margin: '0 auto', width: '100%' }}>
                     <img
                         src={product.image}
                         alt={product.title}
@@ -57,11 +57,11 @@ const ProductDetails = () => {
                     />
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', justifyContent: 'center' }}>
-                    <span style={{ color: 'var(--primary-color)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center' }}>
+                    <span style={{ color: 'var(--primary-color)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.7rem' }}>
                         {product.category}
                     </span>
-                    <h1 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'white', lineHeight: 1.2 }}>
+                    <h1 className="text-responsive-h2" style={{ fontWeight: 800, color: 'white', lineHeight: 1.2 }}>
                         {product.title}
                     </h1>
 
@@ -72,10 +72,10 @@ const ProductDetails = () => {
                         <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>({product.rating})</span>
                     </div>
 
-                    <p style={{ fontSize: '2rem', fontWeight: 800, color: 'white' }}>
+                    <p style={{ fontSize: '1.5rem', fontWeight: 800, color: 'white' }}>
                         ${product.price?.toFixed(2)}
                     </p>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.8 }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
                         {product.description}
                     </p>
 
@@ -98,10 +98,10 @@ const ProductDetails = () => {
                         onClick={handleAddToCart}
                         disabled={product.stock === 0 || added}
                         className="btn-primary"
-                        style={{ padding: '1.25rem', fontSize: '1.1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', opacity: product.stock === 0 ? 0.5 : 1 }}
+                        style={{ padding: '1rem', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', opacity: product.stock === 0 ? 0.5 : 1 }}
                     >
-                        <ShoppingCart size={24} />
-                        {added ? '✓ Added to Bag!' : 'Add to Bag'}
+                        <ShoppingCart size={20} />
+                        {added ? 'Added to Bag!' : 'Add to Bag'}
                     </button>
                 </div>
             </div>
